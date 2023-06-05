@@ -52,14 +52,13 @@ int main(){
     scanf(" %c", &symbol);
 
     for(int i = 1; i <= rows; i++)
-    {   
-        if (i % 2 == 0){
-            printf("twice\n");
-            continue;
-        }
+    {
         for(int j = 1; j <= columns; j++)
         {
             printf("%c", symbol);
+        }
+        if (i % 2 == 0){
+            printf(" - twice");
         }
         printf("\n");
     }

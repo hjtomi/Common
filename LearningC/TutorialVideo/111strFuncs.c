@@ -10,7 +10,7 @@ int main(){
 
     int len = strlen(string1);
     
-    char string3[] = "aSdFmoVIE";
+    char string3[] = "aSdFmuVIE";
     char string4[] = "AsDfMOvie";
     if (strnicmp(string3, string4, 5) == 0){
         printf("Hooray!");

@@ -13,6 +13,6 @@ int main(){
     char name[] = "Tamas";
     int age = 16;
     
-    printf("Your age's square root: %i", birthday(name, age));
+    printf("Your age's square root: %d", birthday(name, age));
     return 0;
 }

@@ -6,6 +6,7 @@ int main(int argc, char const *argv[])
 {
     srand(time(0));
     int randomNumber = rand() % 100 + 1;
+    printf("%d\n", randomNumber);
     int guess;
 
     int guessAm = 0;
@@ -26,10 +27,8 @@ int main(int argc, char const *argv[])
         else if (guess == -1)
         {
             break;
-        }
-        
-        
 
+        }
     }while(guess != randomNumber);
 
     printf("---------------\nGJ you guessed it\nThe number was %d\nIt took you %d guesses", randomNumber, guessAm);

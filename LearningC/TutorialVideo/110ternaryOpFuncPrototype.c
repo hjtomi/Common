@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Function declaration before the main function without a body for better navigation
+// Function declaration before the main function without a body for better navigation (called a function prototype)
 void findMax(int ,int);
 
 int main(){

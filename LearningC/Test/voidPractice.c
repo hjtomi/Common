@@ -3,6 +3,17 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+void arriprint(void *pArr, int size)
+{
+    int *intPtr = NULL;
+    intPtr = (int*)pArr;
+
+    for (int i = 0; i < size; i++){
+        printf("%d ", intPtr[i]);
+    }
+    printf("\n");
+}
+
 int main(void){
 
     int num = 33;
@@ -44,8 +55,11 @@ int main(void){
     // printf("ptr's dereference value: %p", *ptr); ERROR
 
     int newNum = *(int*)ptr;
+    printf("newNum: %d\n", newNum);
 
-    printf("newNum: %d", newNum);
+    int numbers[] = {3, 7, 56, 345, 98, 109, 784, 12, 48, 18, 92, 202, 90};
+    int size = sizeof(numbers)/sizeof(numbers[0]);
+    fun(&numbers, size);
 
     return 0;
 }

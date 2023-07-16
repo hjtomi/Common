@@ -1,16 +1,85 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include "common.h"
 
-int main(void){
+void arriprint(int array[], int size)
+{
+    printf("{");
+    for (int i = 0; i < size; i++)
+    {
+        if (i == size - 1){
+            printf("%d", *array);
+            break;
+        }
 
-    int nums[] = {5, 6, 7, 8};
-    // float grades[] = {1.8, 5, 3.3, 2.9, 4.88};
-    // bool values[] = {true, false, false, true};
-
-    int len = arrilen(nums);
-    printf("len: %d\n", len);
-
-    return 0;
+        printf("%d, ", *array);
+        array++;
+    }
+    printf("}\n");
 }
+
+void arrfprint(float array[], int size, int decSize)
+{
+    // Format the output to x decimals
+    char format[10];
+    sprintf(format, "%%.%df", decSize);
+
+    printf("{");
+    for (int i = 0; i < size; i++)
+    {
+        if (i == size - 1)
+        {
+            printf(format, *array);
+            break;
+        }
+
+        printf(format, *array);
+        printf(", ");
+        array++;
+    }
+    printf("}\n");
+}
+
+void arrdprint(double array[], int size, int decSize)
+{
+    // Format the output to x decimals
+    char format[20];
+    sprintf(format, "%%.%df", decSize);
+    printf("%s\n", format);
+
+    printf("{");
+    for (int i = 0; i < size; i++)
+    {
+        if (i == size - 1){
+            printf(format, *array);
+            break;
+        }
+
+        printf(format, *array);
+        printf(", ");
+        array++;
+    }
+    printf("}\n");
+}
+
+void arrbprint(bool array[], int size)
+{
+    printf("{");
+    for (int i = 0; i < size; i++)
+    {
+        if (i == size - 1){
+            printf("%s", *array ? "true" : "faalse");
+            break;
+        }
+
+        printf("%s, ", *array ? "true" : "false");
+        array++;
+    }
+    printf("}\n");
+}
+
+// int main(void){
+//     return 0;
+// }

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "common.h": "c",
+        "stdio.h": "c",
+        "assert.h": "c",
+        "limits.h": "c",
+        "signal.h": "c",
+        "string.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c"
+    }
+}

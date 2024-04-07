@@ -19,33 +19,22 @@ Enumeration types
 
 using System;
 
-namespace Program
+public class HelloWorld
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        static void Main()
+        int osszeg = 0;
+        for(int i = 0; i < 5; i++)
         {
-            Console.WriteLine("hello");
-            var p1 = new Person("johnny", 51);
-            p1.greeting();
-        }
-    }
-
-    public class Person
-    {
-        public string name;
-        public int age;
-
-        // Method with the same name as the class is a constructor
-        public Person(string name, int age)
-        {
-            this.name = name;
-            this.age = age;
-        }
-
-        public void greeting()
-        {
-            Console.WriteLine($"Hello I am {this.name}, {this.age}");
-        }
+            Console.WriteLine("Adj meg egy szamot");
+			if(i<3)
+			{
+            	osszeg += Convert.ToInt32(Console.ReadLine());
+			} else {
+				osszeg -= Convert.ToInt32(Console.ReadLine());
+			}
+		}
+        Console.WriteLine("Az ertek: "+osszeg);
+        Console.ReadKey();
     }
 }
